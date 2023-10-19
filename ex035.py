@@ -11,4 +11,3 @@ else:
 
 print('THE END')
 
-#DEU RUIM
