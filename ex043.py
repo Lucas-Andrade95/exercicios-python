@@ -4,7 +4,7 @@ nome = str(input('Nome Completo: '))
 altura = float(input('Altura (m): '))
 peso = float(input('Peso (Kg): '))
 imc = float(peso / (altura ** 2))
-print ('IMC = {:.2f}'.format(imc))
+print ('IMC = {:.1f}'.format(imc))
 
 if imc < 18.5:
     print ('{}, você está abaixo do peso ideal.'.format(nome))

@@ -1,9 +1,11 @@
 #FAIXA ETÁRIA DOS NADADORES PROFISSIONAIS
+from datetime import date
 
 print('CADASTRO NA CONFEDERAÇÃO NACIONAL DE NATAÇÃO')
 nome = str(input('Nome completo: '))
 ano = int(input('Ano de Nascimento: '))
-idade = int(2024 - ano)
+atual = date.today().year
+idade = int(atual - ano)
 print ('CATEGORIA:')
 
 if idade <= 9:
