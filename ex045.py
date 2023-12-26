@@ -1,9 +1,9 @@
 #JOKENPÔ
-import random
+from random import randint
 
 print('JO-KEN-PÔ!')
 jogador = int(input('1 - PEDRA; 2 - PAPEL; 3 - TESOURA: '))
-computador = random.randint(1, 3)
+computador = randint(1, 3)
 
 if jogador == 1 and computador == 1:
     print('PEDRA X PEDRA: NINGUÉM VENCEU.')

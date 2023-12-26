@@ -1,9 +1,9 @@
 #VALORES DE PRODUTO, JUROS E CONDIÇÕES
 
-print('Olá! Aqui vendemos somente três tipos de Sapatos: ')
-print('1 - Sapato Social por R$ 149,90')
-print('2 - Tênis por apenas R$ 99,90 ')
-print('3 - Sandália por apenas R$ 49,90')
+print('''Olá! Aqui vendemos somente três tipos de Sapatos:
+1 - Sapato Social por R$ 149,90')
+2 - Tênis por apenas R$ 99,90 ')
+3 - Sandália por apenas R$ 49,90''')
 
 produto = int(input('Qual deles você escolhe? (Digite 1, 2 ou 3): '))
 
