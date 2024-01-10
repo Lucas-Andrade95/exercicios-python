@@ -1,22 +1,22 @@
 #SOMANDO NUMEROS, CALCULANDO A SOMA E A MÉDIA, MAIOR E MENOR VALOR E PERGUNTANDO SE DESEJA CONTINUAR.
 
-numero = 0
-soma = 0
-contador = 0
+numero = soma = contador = maiorvalor = menorvalor = 0
 fim = 'S'
-maiorvalor = 0
-menorvalor = 99999999999999999999999999999999999999999999999999999999999999999999999999999999999 #JEITINHOBRASILEIRO
+
+#menorvalor = 99999999999999999999999999999999999999999999999999999999999999999999999999999999999 #JEITINHOBRASILEIRO
 
 while fim == 'S':
     numero = float(input('Digite um número: '))
     soma += numero
+    if numero != 0:
+        contador += 1
+    if contador == 1:
+         maiorvalor = menorvalor = numero
     if numero > maiorvalor:
          maiorvalor = numero
     if numero < menorvalor:
          menorvalor = numero
-    if numero != 0:
-        contador += 1
-    pergunta = input('Deseja continuar [S/N]? ').upper().strip()
+    pergunta = input('Deseja continuar [S/N]? ').upper().strip() [0]
     if pergunta == 'N':
         fim = 'N'
     elif pergunta == 'S':
@@ -26,5 +26,5 @@ while fim == 'S':
         fim = pergunta
 
 media = soma / contador
-print(f'''Você digitou {contador} números. A soma deles é {soma} e a média é {media}.
+print(f'''Você digitou {contador} números. A soma deles é {soma} e a média é {media:.3f}.
 O maior valor é {maiorvalor} e o menor valor é {menorvalor}''')
