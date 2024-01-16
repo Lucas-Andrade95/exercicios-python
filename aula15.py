@@ -1,4 +1,4 @@
-#LOOP INFINITO
+#LOOP INFINITO / COMANDO BREAK
 
 cont = 1
 while True:
