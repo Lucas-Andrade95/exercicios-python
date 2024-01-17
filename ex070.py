@@ -19,11 +19,13 @@ while True:
     if preço < maisbarato:
         maisbarato = preço
         nomedoprodutomaisbarato = produto
-    
-    fim = str(input('Quer continuar? ')).strip() [0]
+    fim = ' '
+    while fim not in 'SN':
+        fim = str(input('Quer continuar? [S/N]: ')).strip().upper() [0]
     print('-'*25)
-    if fim in 'Nn':
+    if fim == 'N':
         break
+
 print('---FIM DO PROGRAMA---')
 print(f'''O total da compra foi de R$ {soma}.
 Temos {maisdemilreais} produtos custando mais de R$ 1000,00 
