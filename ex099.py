@@ -6,6 +6,12 @@ def maior(lista):
             x = c
     return x
 
+def menor(lista):
+    x = lista[0]
+    for c in lista:
+        if c < x:
+            x = c
+    return x
 
 numeros = []
 
@@ -21,7 +27,5 @@ mostralinha()
 print('Analisando os valores informados: ')
 for c in numeros:
     print(c, end = ' ')
-print(f'--> Foram informados {len(numeros)} ao todo.')
-print(f'O maior valor informado foi {maior(numeros)}.')
-
-
+print(f'--> Foram informados {len(numeros)} números ao todo.')
+print(f'O maior valor informado foi {maior(numeros)} e o menor valor foi {menor(numeros)}.')

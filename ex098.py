@@ -1,7 +1,13 @@
-from funcoes import mostralinha
+from funcoes import mostralinha, contagem
 
-def contagem(a, b, c):
-    for x in range(a, b, c):
+def contagem(inicio, fim, passo):
+    if inicio > fim and passo > 0:
+        passo = passo * (-1)
+    elif inicio > fim and passo == 0:
+        passo = - 1
+    elif inicio < fim and passo == 0:
+        passo = 1
+    for x in range(inicio, fim, passo):
         print(x, end = ' ')
 
 mostralinha()
@@ -12,16 +18,11 @@ contagem(10, 0, -2)
 print('Fim! ')
 mostralinha()
 print('Agora é a sua vez de personalizar a contagem! ')
-mostralinha()
 
 inicio = int(input('Início: '))
 fim = int(input('Fim: '))
 passo = int(input('Passo: '))
-if inicio > fim and passo > 0:
-    passo = passo * (-1)
-elif inicio > fim and passo == 0:
-    passo = - 1
-elif inicio < fim and passo == 0:
-    passo = 1
+
 contagem(inicio, fim, passo)
 print('Fim! ')
+mostralinha()

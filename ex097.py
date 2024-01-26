@@ -1,8 +1,8 @@
 def mensagem(msg):
-    a = len(msg) + 10
-    b = len(msg)
+    a = len(msg) + 2
     print('-'*a)
-    print(' '*b, f'{msg}')
+    print(f' {msg}')
     print('-'*a)
 
 mensagem('Cursinho')
+mensagem('Lucas Vinícius de Andrade')

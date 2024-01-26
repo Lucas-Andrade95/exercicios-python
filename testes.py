@@ -1,4 +1,17 @@
-cadastro = {}
+
+def ParouImpar(n):
+    if n % 2 == 0:
+        return True
+    else:
+        return False
+
+while True:
+    if ParouImpar(int(input('Digite um número: '))):
+        print('É par!')
+    else:
+        print('É ímpar!')
+
+'''cadastro = {}
 geral = []
 mulheres = []
 contador = 0
@@ -50,3 +63,4 @@ for c in geral:
             print(f'{chave} = {valor}; ', end = '')
 print()
 print('>>> ENCERRADO <<<')
+'''
