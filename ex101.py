@@ -8,7 +8,7 @@ def voto(anodenascimento):
         return (f'{idade} anos de idade. Situação: OPCIONAL')
     elif 18 <= idade < 65:
         return (f'{idade} anos de idade: Situação: OBRIGATÓRIO ')
-    elif idade < 18:
+    elif idade < 16:
         return (f'{idade} anos de idade: Situação: PROIBIDO')
 
 mensagem('SITUAÇÃO ELEITORAL')

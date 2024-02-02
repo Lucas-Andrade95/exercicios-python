@@ -12,39 +12,26 @@ def notas(*numero, sit=False):
     'media': Media das notas inseridas
     'situacao':  Situação da classe (BOA, RAZOÁVEL, RUIM), se Parâmetro2 = True.
     """
-    if sit == False:
-        lista = [numero]
-        soma = 0
-        for c in numero:
-            soma += c
-        media = soma / len(numero)
-        dicionario = {
-            'total': len(numero),
-            'maior': max(numero),
-            'menor': min(numero),
-            'média': media
-        }
-    else:
-        lista = [numero]
-        soma = 0
-        for c in numero:
-            soma += c
-        media = soma / len(numero)
+
+    lista = [numero]
+    soma = 0
+    for c in numero:
+        soma += c
+    media = soma / len(numero)
+    dicionario = {
+        'total': len(numero),
+        'maior': max(numero),
+        'menor': min(numero),
+        'média': media
+    }
+    if sit == True:
         if media < 6:
-            situacao = 'RUIM'
+            dicionario['situacao'] = 'RUIM'
         elif 6 <= media < 7:
-            situacao = 'RAZOÁVEL'
+            dicionario['situacao'] = 'RAZOÁVEL'
         elif media >= 7:
-            situacao = 'BOA'
-        dicionario = {
-            'total': len(numero),
-            'maior': max(numero),
-            'menor': min(numero),
-            'média': media,
-            'situação': situacao
-        }
+            dicionario['situacao'] = 'BOA'
     return dicionario
 
-resp = notas(5, 9.6, 8.5, sit=True)
+resp = notas(5, 9.6, 8.5)
 print(resp)
-help(notas)

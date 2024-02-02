@@ -1,5 +1,7 @@
 
-def ParouImpar(n):
+help()
+
+'''def ParouImpar(n):
     if n % 2 == 0:
         return True
     else:
@@ -9,7 +11,7 @@ while True:
     if ParouImpar(int(input('Digite um número: '))):
         print('É par!')
     else:
-        print('É ímpar!')
+        print('É ímpar!')'''
 
 '''cadastro = {}
 geral = []

@@ -8,17 +8,16 @@ def fatorial(n, show=False):
     e seu resultado em uma string, retornando 'None'.
     """
     f = 1
-    if show == False:
-        for c in range(n, 0, -1):
-            f = f * c
-        return f
-    else:
-        for c in range(n, 0, -1):
-            f = f * c
+    for c in range(n, 0, -1):
+        if show == True:
+            print(c, end='')
             if c > 1:
-                print(f' {c} x', end='')
-            elif c == 1:
-                print(f' 1 = {f}')
+                print(f' x ', end='')
+            else:
+                print(f' = ', end='')
+        f = f * c
+    return f
+
         
 
 numero = int(input('Digite um número: '))
